@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kombinator1</title>
+    <style>
+      /* ADJACENT SIBLING SELECTOR (+) */
+      /*Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen Img*/
+      img + p {
+        color: blue;
+        font-style: italic;
+        font-weight: bold;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Ini merupakan paragraf pertama. Rule styling tidak berlaku di paragraf ini</p>
+    <img src="assets/image/bandung-badge.png" alt="Logo Kota Bandung" />
+    <p>Ini merupakan paragraf kedua dan terletak setelah elemen gambar. Rule styling berlaku di paragraf ini</p>
+    <div><p>Ini merupakan paragraf ketiga. Letaknya memang dibawah gambar tapi Rule styling tidak berlaku di paragraf ini</p></div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector CSS</title>
+    <style>
+      span {
+        /* TYPE SELECTOR */
+        color: rgb(200, 255, 0);
+      }
+
+      .red {
+        /* CLASS SELECTOR */
+        color: rgb(255, 0, 0);
+      }
+
+      .skyblue-bg {
+        background-color: skyblue;
+      }
+
+      .fancy {
+        font-weight: bold;
+        text-shadow: 4px 4px 3px #77f;
+      }
+
+      h2.fancy {
+        text-shadow: 4px 4px 3px #00c83b;
+      }
+
+      #special {
+        /* ID SELECTOR */
+        background-color: skyblue;
+      }
+
+      /* Type ID bersifat Unik. Jika kita ingin menerapkan sebuah rule pada banyak elemen,
+      sebaiknya gunakan atribbut class bukan dengan id*/
+
+      /* ID SELECTOR */
+      /* <a> element yang menerapkan href attribut*/
+      a[href] {
+        color: blue;
+      }
+
+      /* <a> element yang menerapkan nilai pada href dengan awalan "#" */
+      a[href^='#'] {
+        background-color: gold;
+      }
+
+      /* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+      a[href*='example'] {
+        background-color: silver;
+      }
+
+      /* <a> element yang menerapkan nilai pada href yang mengandung teks "insentive"
+          tidak mementingkan huruf kapital */
+      a[href*='insensitive' i] {
+        color: cyan;
+      }
+
+      /* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+      a[href$='.org'] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <span> Teks dalam elemen Span</span>
+    <p>Teks dalam elemen Paragraf</p>
+    <span> Teks dalam elemen Span ke 2</span>
+
+    <p class="skyblue-bg">Paragraf dengan background berwarna biru langit</p>
+    <p class="fancy">Paragraf dengan gaya fancy</p>
+    <p clas>Paragraf berwarna standar tanpa styling</p>
+
+    <h1 class="red">Heading dengan teks berwarna merah</h1>
+    <h1 class="red skyblue-bg">Heading dengan teks berwarna merah dengan background berwarna biru langit</h1>
+    <p class="red fancy">Paragraf dengan teks berwarna merah dan bergaya fancy</p>
+    <h2 class="fancy">Heading 2 dengan teks bergaya fancy</h2>
+
+    <div>
+      <p id="special">Ini merupakan konten di dalam sebuah div yang diberi div special</p>
+    </div>
+    <div>
+      <p>Ini merupakan konten di dalam sebuah div biasa</p>
+    </div>
+
+    <ul>
+      <ul>
+        <li><a href="#internal">Internal Link</a></li>
+        <li><a href="http://example.com">Example Link</a></li>
+        <li><a href="#insensitive">Insensitive Internal Link</a></li>
+        <li><a href="#http://example.org">Example OrgLink</a></li>
+      </ul>
+    </ul>
+  </body>
+</html>
